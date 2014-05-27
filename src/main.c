@@ -48,6 +48,33 @@ void outportb (uint16 _port, uint8 _data)
     __asm__ __volatile__ ("outb %1, %0" : : "dN" (_port), "a" (_data));
 }
 
+int calc(char *input)
+{
+    int a = 0;
+    int b = 0;
+    char optor;
+    int i;
+    for (i = 0; input[i] >= 48 && input[i] <= 57; i = i+1)
+    {
+        a = a * 10;
+        a = a + input[i]-48;
+    }
+    optor = input[i];
+    for (i = i + 1; input[i] >= 48 && input[i] <= 57; i = i+1)
+    {
+        b = b * 10;
+        b = b + input[i]-48;
+    }
+    if (optor == '+')
+        return a+b;
+    if (optor == '-')
+        return a-b;
+    if (optor == '*')
+        return a*b;
+    if (optor == '/')
+        return a/b;
+}
+
 void kmain(void)
 {
 	init_video();
