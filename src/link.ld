@@ -1,0 +1,28 @@
+OUTPUT(kernel.bin)
+STARTUP(start.o)
+INPUT(main.o scrn.o)
+ENTRY(_start)
+phys = 0x00100000;
+SECTIONS
+{
+  .text : AT(phys) {
+    code = .;
+	start.o (.text)
+	* (.text)
+    * (.rodata)
+    . = ALIGN(4096);
+  }
+  .data : AT(phys + (data - code))
+  {
+    data = .;
+	* (.data)
+    . = ALIGN(4096);
+  }
+  .bss : AT(phys + (bss - code))
+  {
+    bss = .;
+    * (.bss)
+    . = ALIGN(4096);
+  }
+  end = .;
+}
