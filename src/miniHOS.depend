@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1402757514 source:/home/shervin/CB Projects/miniHOS/gdt.c
+	"HOS.h"
+
+1412020277 /home/shervin/CB Projects/miniHOS/HOS.h
+
+1401200662 source:/home/shervin/CB Projects/miniHOS/idt.c
+	"HOS.h"
+
+1401206004 source:/home/shervin/CB Projects/miniHOS/irq.c
+	"HOS.h"
+
+1409827020 source:/home/shervin/CB Projects/miniHOS/isr.c
+	"HOS.h"
+
+1412020439 source:/home/shervin/CB Projects/miniHOS/kb.c
+	"HOS.h"
+
+1402757514 source:/home/shervin/CB Projects/miniHOS-0.0.6/gdt.c
+	"HOS.h"
+
+1401200662 source:/home/shervin/CB Projects/miniHOS-0.0.6/idt.c
+	"HOS.h"
+
+1401206004 source:/home/shervin/CB Projects/miniHOS-0.0.6/irq.c
+	"HOS.h"
+
+1409827020 source:/home/shervin/CB Projects/miniHOS-0.0.6/isr.c
+	"HOS.h"
+

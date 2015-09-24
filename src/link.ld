@@ -1,6 +1,4 @@
 OUTPUT(kernel.bin)
-STARTUP(start.o)
-INPUT(main.o scrn.o)
 ENTRY(_start)
 phys = 0x00100000;
 SECTIONS
